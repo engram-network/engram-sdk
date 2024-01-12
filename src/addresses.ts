@@ -13,7 +13,7 @@ type ChainAddresses = {
   v1MixedRouteQuoterAddress?: string
 }
 
-const DEFAULT_NETWORKS = [ChainId.ENGRAM, ChainId.MAINNET, ChainId.GOERLI, ChainId.SEPOLIA]
+const DEFAULT_NETWORKS = [ChainId.ENGRAM, ChainId.SEPOLIA]
 
 function constructSameAddressMap(address: string, additionalNetworks: ChainId[] = []): AddressMap {
   return DEFAULT_NETWORKS.concat(additionalNetworks).reduce<AddressMap>((memo, chainId) => {
@@ -173,7 +173,7 @@ const BASE_GOERLI_ADDRESSES: ChainAddresses = {
   swapRouter02Address: '0x8357227D4eDc78991Db6FDB9bD6ADE250536dE1d'
 }
 
-// Base Goerli v3 addresses
+// Engram Tokio v3 addresses
 const ENGRAM_ADDRESSES: ChainAddresses = {
   v3CoreFactoryAddress: '0x9c63aC61d11081FaAF813158887611f36b900cD3',
   multicallAddress: '0xE13898De54606eeCA2ea8086be7a4Fcbf795D83b',
